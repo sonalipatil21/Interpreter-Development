@@ -83,6 +83,7 @@ Operators evaluate as follows:
  – / denotes division on nonnegative integers
  
 Statements are evaluated as follows:
+
  – Assignment: Evaluate RHS expression, store result in memory entry for the LHS identifier.
  Assignment adds an entry to the memory if there does not exist any memory entry for the LHS
  identifier. Finally, remove the subtree that corresponds to the assignment.
