@@ -1,7 +1,3 @@
-/*
- * Name: Sonali Patil
- * Phase: 2
- */
 package misc;
 
 public class CompilerError extends RuntimeException {

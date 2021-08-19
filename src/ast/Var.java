@@ -29,6 +29,6 @@ public class Var implements Expr {
 
     @Override
     public String toString() {
-        return "    IDENTIFIER " + name + "\n";
+        return "\tIDENTIFIER " + name + "\n";
     }
 }

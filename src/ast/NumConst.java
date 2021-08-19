@@ -28,6 +28,6 @@ public class NumConst implements Expr {
 
     @Override
     public String toString() {
-        return "    NUMBER " + value + "\n";
+        return "\tNUMBER " + value + "\n";
     }
 }

@@ -1,8 +1,3 @@
-/*
- * Name: Sonali Patil
- * Phase: 2
- */
-
 package misc;
 
 import java.util.Iterator;

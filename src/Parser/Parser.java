@@ -1,13 +1,8 @@
-/*
- * Name: Sonali Patil
- * Phase: 2
- */
-
-
 package Parser;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 import Tokenizer.Token;
 import Tokenizer.Token.Type;
@@ -47,30 +42,23 @@ public class Parser {
 
     private Parser(ArrayList<Token> tokenList) {
         this.inTokenList = tokenList;
-        this.tokenIndex = 0;
-        
-        if (inTokenList.isEmpty()) {
-            this.eof = new Token(Type.EOF, "<EOF>");
-        }
-        else {
-            Token last = inTokenList.get(inTokenList.size() - 1);
-            this.eof = new Token(Type.EOF, "<EOF>");
-        }
+        this.tokenIndex = 0;      
+        this.eof = new Token(Type.EOF, "<EOF>");
     }
     
-    public static Statement parseStatement(ArrayList<Token> tokList) {
+    public static List<Statement> parseStatement(ArrayList<Token> tokList) {
         Parser parser = new Parser(tokList);
-        Statement stmt = null;
+        List<Statement> stmtList = new ArrayList<Statement>();
         while (true) {
         	
         	Token t = parser.peek();
             if (t == parser.eof) {
                 break;
             }
-        	stmt = parser.parseStatement();
+            stmtList.add(parser.parseStatement());
         	//parser.consume(Type.EOF);
         }
-        return stmt;
+        return stmtList;
     }
     
      public static Expr parseExpr(ArrayList<Token> tokList) {

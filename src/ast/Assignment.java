@@ -34,6 +34,6 @@ public class Assignment implements Statement {
 
     @Override
     public String toString() {
-        return "PUNCTUATION " + opName + "\n        " + "IDENIFIER " + varName + "\n    " + expr + "\n";
+        return "PUNCTUATION " + opName + "\n\t" + "IDENIFIER " + varName + "\n" + expr + "\n";
     }
 }

@@ -1,8 +1,3 @@
-/*
- * Name: Sonali Patil
- * Phase: 2
- */
-
 package Parser;
 
 import java.io.PrintWriter;
@@ -16,10 +11,12 @@ import ast.*;
 public class TGenerator {
 	public static PrintWriter writer = null;
 	
-    public static List<String> generate(Statement stmt, PrintWriter outW) {
+    public static List<String> generate(List<Statement> stmtList, PrintWriter outW) {
     	writer = outW;
         TGeneratorAstVisitor visitor = new TGeneratorAstVisitor();
-        stmt.accept(visitor);
+        for (Statement s : stmtList) {
+        	s.accept(visitor);
+        }        
         return visitor.getOutput();
     }
     
@@ -57,11 +54,11 @@ public class TGenerator {
         @Override
         public void visit(WhileLoop whileLoop) {
 
-            whileLoop.head.accept(this);
+            /*whileLoop.head.accept(this);
 
             for (Statement s : whileLoop.body) {
                 s.accept(this);
-            }
+            }*/
             writer.print(whileLoop);
         }
 

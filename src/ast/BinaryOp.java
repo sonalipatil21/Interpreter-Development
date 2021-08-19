@@ -38,6 +38,6 @@ public class BinaryOp implements Expr {
 
     @Override
     public String toString() {
-        return "    PUNCTUATION " + opName + "\n        " + left + "        " + right;
+        return "\tPUNCTUATION " + opName + "\n\t" + left + "\t" + right;
     }
 }

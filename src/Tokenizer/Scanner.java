@@ -1,8 +1,3 @@
-/*
- * Name: Sonali Patil
- * Phase: 1
- */
-
 /*package Tokenizer;
 
 import java.io.*;

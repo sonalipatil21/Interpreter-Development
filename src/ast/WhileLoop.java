@@ -36,9 +36,9 @@ public class WhileLoop implements Statement {
 
     @Override
     public String toString() {
-    	String str = "WHILE-LOOP \n    " + head;
+    	String str = "WHILE-LOOP \n" + head;
         for (Statement s : body) {
-        	str += "    " + s;
+        	str += "\t" + s + "\t";
         }        
         return str;
     }
