@@ -3,7 +3,7 @@
 ## Objective:
 Construct an interpreter for a small imperative language.
 
-### Phase 1
+## Phase 1
 ### Phase 1 Description
 For the first phase I constructed the scanner module. A scanner, also called a tokenizer or a lexer,
 processes the stream of characters that holds the expression to be evaluated. The result is a stream of
@@ -34,7 +34,9 @@ from the next token. Except for indicating token boundaries, white space is igno
 terminates the current token and begins the next token. The exception is white space, in which case
 the first rule applies.
 
-### Phase 2
+
+
+## Phase 2
 ### Phase 2 Description
 For the second phase I constructed the parser module. A parser processes the steam tokens produced
 by the scanner according to the language grammar. The result will be an abstract syntax tree representing
@@ -64,7 +66,9 @@ piece -> element { * element }
 
 element -> ( expression ) | NUMBER | IDENTIFIER
 
-### Phase 3
+
+
+## Phase 3
 ### Phase 3 Description
 For the third phase I constructed the final module, the evaluator module.
 
