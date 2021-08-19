@@ -74,33 +74,33 @@ For the third phase I constructed the final module, the evaluator module.
 
 ### Evaluator Specification 
 Operators evaluate as follows:
- – + denotes numerical addition
+ - + denotes numerical addition
  
- – * denotes numerical multiplication
+ - * denotes numerical multiplication
  
- – - denotes numerical subtraction- There are no negative numbers in this language
+ - - denotes numerical subtraction- There are no negative numbers in this language
  
- – / denotes division on nonnegative integers
+ - / denotes division on nonnegative integers
  
 Statements are evaluated as follows:
 
- – Assignment: Evaluate RHS expression, store result in memory entry for the LHS identifier.
+ - Assignment: Evaluate RHS expression, store result in memory entry for the LHS identifier.
  Assignment adds an entry to the memory if there does not exist any memory entry for the LHS
  identifier. Finally, remove the subtree that corresponds to the assignment.
  
- – If statement: Evaluate the expression first. If the expression evaluates to a positive number then
+ - If statement: Evaluate the expression first. If the expression evaluates to a positive number then
  evaluate subtree that corresponds to the statement after then. If the expression evaluates to 0
  then evaluate subtree that corresponds to the statement after else. Finally, remove the subtree
  that corresponds to the if statement.
  
- – While loop: Clone the subtree that corresponds to the expression, as an independent tree. Evaluate
+ - While loop: Clone the subtree that corresponds to the expression, as an independent tree. Evaluate
  that cloned subtree. If it evaluates to a positive number then substitute the whole while loop subtree with a
  sequencing subtree, where the left child corresponds to the statement in the body of the
  while loop, and the right child of sequencing operator corresponds to the original while
  loop. If it evaluates to 0 then remove the whole subtree that corresponds to the while loop.
  Finally remove the cloned subtree.
  
- – Skip: Remove the subtree that corresponds to skip. (There is nothing to do for this statement).
+ - Skip: Remove the subtree that corresponds to skip. (There is nothing to do for this statement).
  
- – Sequencing: First evaluate the statement on the LHS of sequencing operator ;. Next, evaluate
+ - Sequencing: First evaluate the statement on the LHS of sequencing operator ;. Next, evaluate
  the statement on the RHS
