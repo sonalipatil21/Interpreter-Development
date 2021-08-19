@@ -1,0 +1,36 @@
+z := 0;
+Identifier: z
+Punctuation: :=
+Number: 0
+Punctuation: ;
+x := 10;
+Identifier: x
+Punctuation: :=
+Number: 10
+Punctuation: ;
+y := 0;
+Identifier: y
+Punctuation: :=
+Number: 0
+Punctuation: ;
+while x-y do
+Keyword: while
+Identifier: x
+Punctuation: -
+Identifier: y
+Keyword: do
+z := z + y;
+Identifier: z
+Punctuation: :=
+Identifier: z
+Punctuation: +
+Identifier: y
+Punctuation: ;
+y := y + 1
+Identifier: y
+Punctuation: :=
+Identifier: y
+Punctuation: +
+Number: 1
+endwhile
+Keyword: endwhile
