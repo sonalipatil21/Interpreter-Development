@@ -12,7 +12,7 @@ tokens, where a token is a meaningful “word” in the language.
 ### Scanner Specification 
 
 There are five types of tokens in the language, defined by the following regular expressions:
-
+```
 IDENTIFIER = ([a-z] | [A-Z])([a-z] | [A-Z] | [0-9])*
 
 NUMBER = [0-9]+
@@ -20,7 +20,7 @@ NUMBER = [0-9]+
 PUNCTUATION = \+ | \- | \* | / | \( | \) | := | ;
 
 KEYWORD = if | then | else | endif | while | do | endwhile | skip
-
+```
 Although the regular expressions defining IDENTIFIER and NUMBER tokens indicate that these tokens
 can be infinitely long, I assumed that no token will be longer than 100 characters. This restriction is
 primarily to allow to use fixed length arrays or strings to hold tokens if variable length arrays or strings
@@ -45,6 +45,7 @@ the parsed code.
 ### Parser Specification 
 
 Grammar of the language is defined as follows:
+```
 statement -> basestatement { ; basestatement }
 
 basestatement -> assignment | ifstatement | whilestatement | skip
@@ -65,7 +66,7 @@ factor -> piece { / piece }
 piece -> element { * element }
 
 element -> ( expression ) | NUMBER | IDENTIFIER
-
+```
 
 
 ## Phase 3
